@@ -15,7 +15,12 @@ io.on("connection", (socket) => {
   console.log(`${socket.id} just joined!`);
 
   socket.on("data", (data) => {
-    io.emit("data", data);
+    // io.emit("data", data);
+    socket.join(data.roomNumber);
+    io.to(data.roomNumber).emit(
+      "joinedRoom",
+      `${data.username} has just joined the room ${data.roomNumber}`
+    );
   });
 
   socket.on("disconnect", () => {
