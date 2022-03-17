@@ -3,12 +3,12 @@ import styled, { keyframes } from "styled-components";
 const TitleTransition = keyframes`
   from{
     opacity: 0;
-    transform: translateY(-5%);
+    transform: rotateY(-10deg);
   }
 
   to{
     opacity: 1;
-    transform:translateY(0)
+    transform:rotateY(0)
   }
 `;
 
@@ -24,7 +24,7 @@ const Title = styled.h1`
   font-weight: 300;
   font-size: 3.3em;
   text-transform: uppercase;
-  animation: ${TitleTransition} 0.85s ease-in-out;
+  animation: ${TitleTransition} 0.8s;
 `;
 
 export const Header = () => {

@@ -1,5 +1,16 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useNavigate } from "react-router-dom";
+
+const Transition = keyframes`
+  from {
+    opacity:0;
+    transform: rotateY(-10deg)
+  }
+  to{
+    opacity: 1;
+    transform:rotateY(0)
+  }
+`;
 
 const CenteringContainer = styled.div`
   width: 100%;
@@ -8,6 +19,7 @@ const CenteringContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  animation: ${Transition} 0.75s;
 `;
 
 const H1 = styled.h1`

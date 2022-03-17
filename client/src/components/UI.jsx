@@ -3,11 +3,11 @@ import styled, { keyframes } from "styled-components";
 const UITransition = keyframes`
   0%{
     opacity: 0;
-    transform: translateY(-5%);
+    transform: rotateY(-10deg);
   }
   100%{
     opacity: 1;
-    transform: translateY(0);
+    transform: rotateY(0);
   }
 `;
 
@@ -17,7 +17,7 @@ const UIContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: ${UITransition} 1.1s ease-in-out;
+  animation: ${UITransition} 1s;
 `;
 
 const Form = styled.form`
