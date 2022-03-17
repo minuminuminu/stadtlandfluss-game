@@ -8,7 +8,6 @@ function App() {
 
   const socket = io("http://localhost:3001");
 
-  socket.on("data", (data) => console.log(data));
   socket.on("joinedRoom", (args) => console.log(args));
 
   return (
