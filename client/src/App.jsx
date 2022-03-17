@@ -1,13 +1,7 @@
-import styled from "styled-components";
 import { useForm } from "react-hook-form";
 import { Header } from "./components/Header";
 import { UI } from "./components/UI";
 import { io } from "socket.io-client";
-
-const FullBody = styled.div`
-  width: 100vw;
-  height: 100vh;
-`;
 
 function App() {
   const { register, handleSubmit } = useForm();
@@ -18,10 +12,10 @@ function App() {
   socket.on("joinedRoom", (args) => console.log(args));
 
   return (
-    <FullBody>
+    <>
       <Header />
       <UI register={register} handleSubmit={handleSubmit} socket={socket} />
-    </FullBody>
+    </>
   );
 }
 

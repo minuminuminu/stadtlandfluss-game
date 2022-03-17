@@ -49,6 +49,7 @@ const Submit = styled.button`
   background-color: #ffffffb9;
   width: 10vw;
   height: 30px;
+  font-size: 1em;
   margin-top: 2em;
   border: none;
   border-radius: 4px;

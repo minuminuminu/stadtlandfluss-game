@@ -5,9 +5,15 @@ import TestPage from "./pages/TestPage";
 import { GlobalStyle } from "./GlobalStyles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
+import styled from "styled-components";
+
+const FullBody = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
 
 ReactDOM.render(
-  <>
+  <FullBody>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
@@ -16,6 +22,6 @@ ReactDOM.render(
       </Routes>
     </BrowserRouter>
     <GlobalStyle />
-  </>,
+  </FullBody>,
   document.getElementById("root")
 );
