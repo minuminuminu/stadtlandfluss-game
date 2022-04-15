@@ -22,10 +22,17 @@ io.on("connection", (socket) => {
     );
   });
 
+  socket.on("change", (args) => {
+    let dummyArr = [...args];
+    dummyArr.push("ledrool");
+
+    io.emit("changeContent", dummyArr);
+  });
+
   socket.on("disconnect", () => {
     socket.removeAllListeners();
     console.log(socket.id + " disconnected.");
   });
 });
 
-httpServer.listen(3001);
+httpServer.listen(3001, () => console.log("listening on port 3001"));
